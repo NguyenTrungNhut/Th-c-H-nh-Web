@@ -60,12 +60,14 @@ Chỉnh font chữ cho những hinh
 @font-face
 
 {
+
 	font-family:'Museo';
 	src: url('bootstrap/js/exljbris - Museo-700.otf') format('truetype');
 }
 
 h1,h2,h3,h4,h5,h6
 {
+
 	font-family:'Museo', Rockwell,Serif;
 }
 
@@ -73,17 +75,20 @@ h1,h2,h3,h4,h5,h6
 a
 
 {
+
 	color:#fb2f3a;// màu chữ
 }
 
 a:hover, a:focus
 
 {
+
 	color:#eb2f39;	
 	
 	text-decoration:none;   
 	
 	border-bottom:1px solid;
+	
 }
 
 
@@ -92,6 +97,7 @@ Button
 .btn
 
 {
+
         -webkit-border-radius:3px;
 	
 	-moz-border-radius:3px;
@@ -117,6 +123,7 @@ Button
 .btn:hover, .btn:focus
 
 {
+
 	background:#8e9093; // nền xám
 	
 	color:#fff; chữ trăng
@@ -124,7 +131,6 @@ Button
 	border:1px solid rgba(0,0,0,0.2);khung giữa
 	
 	margin-top:30px;
-
 
 }
 
@@ -141,6 +147,7 @@ Navbar
 .hero-unit khung đầu
 
 {
+
 	padding:0px; 	
 	
 	background: #222  url(bootstrap/img/hero-unit.jpg) no-repeat 50% top ; chèn hình
@@ -155,6 +162,7 @@ Navbar
 .navbar-inner // khung 
 
 {
+
 	//(padding : 40px 0; khung cách đầu web 1 khoảng)
 	
 	background:transparent; //trong suốt
@@ -177,6 +185,7 @@ Navbar
 .navbar .brand // dipped
 
 {
+
 	text-indent:-9999px;
 	
 	width:127px; //độ dài
@@ -190,6 +199,7 @@ Navbar
 .navbar .nav
 
  {
+ 
 	padding:0; canh chỉnh vị trí
 	
 	margin:0;
@@ -199,6 +209,7 @@ Navbar
 .navbar .nav > li > a // đinh dạng kiểu chử Home About Us ....
 
 {
+
 	font-weight:bold;//chữ đậm
 	
 	font-size:14px;// cở chữ
@@ -222,6 +233,7 @@ Navbar
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus
 
 {
+
 	box-shadow:none; //khung ko có bóng
 	
 	background:rgba(0,0,0,0.7);//đổ màu nút Home khung màu đen
@@ -232,7 +244,9 @@ Hero-unit-inner
 
 .hero-unit-inner h1
 
-{	margin-top:50px;//khoảng cách trên
+{	
+
+	margin-top:50px;//khoảng cách trên
 
 	margin-bottom:20px; //khoảng cách dưới
 	
@@ -247,6 +261,7 @@ Hero-unit-inner
 .hero-unit-inner h4
 
 {
+
 	color:#cccccc;	chữ màu xám
 	
 	text-shadow: 0 1px 0 rgba(0,0,0,0.3); tạo bóng cho chữ
@@ -258,6 +273,7 @@ Hero-unit-inner
 .hero-unit-inner  a
 
 {
+
 	margin-left:10px ;  // khoảng cách giữa 2 chữ
 	
 	color : #fff;	//màu chữ sám
@@ -277,6 +293,7 @@ Hero-unit-inner
 .hero-unit-inner .btn-primary
 
 {
+
 	background:#fb2f3a; màu nút
 	
 	border:none; đường viền 0

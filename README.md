@@ -84,16 +84,26 @@ Button
 
 .btn
 {
-           -webkit-border-radius:3px;
+        -webkit-border-radius:3px;
+	
 	-moz-border-radius:3px;
+	
 	border-radius:3px;   //kích thước
+	
 	background:#9a9c9f; // màu nền
+	
 	font-size:12px; cở chữ
+	
 	font-weight:bold; chữ đậm
+	
 	color:#fff; màu chữ
+	
 	text-shadow:none; // bóng chữ
+	
 	box-shadow:inset 0 1px 0 rgba(255,255,255,0.2); bóng khung
+	
 	border:1px solid rgba(0,0,0,0.2); khung giữa bao ngoài chữ
+	
 }
 
 .btn:hover, .btn:focus

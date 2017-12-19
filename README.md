@@ -40,28 +40,36 @@ Khung sườn
 			</div>
 		</div>
 15/12/2017
+
 Code
+
 Chỉnh font chữ cho những hinh
+
 @font-face
 {
 	font-family:'Museo';
 	src: url('bootstrap/js/exljbris - Museo-700.otf') format('truetype');
 }
+
 h1,h2,h3,h4,h5,h6
 {
 	font-family:'Museo', Rockwell,Serif;
 }
+
 a
 {
 	color:#fb2f3a;// màu chữ
 }
+
 a:hover, a:focus
 {
 	color:#eb2f39;	
 	text-decoration:none;   
 	border-bottom:1px solid;
 }
+
 Button
+
 .btn
 {
            -webkit-border-radius:3px;
@@ -75,6 +83,7 @@ Button
 	box-shadow:inset 0 1px 0 rgba(255,255,255,0.2); bóng khung
 	border:1px solid rgba(0,0,0,0.2); khung giữa bao ngoài chữ
 }
+
 .btn:hover, .btn:focus
 {
 	background:#8e9093; // nền xám
@@ -82,12 +91,16 @@ Button
 	border:1px solid rgba(0,0,0,0.2);khung giữa
 margin-top:30px;
 
+
 }
+
 .heading
 {
 	margin-bottom:20px;	// h4
 }
+
 Navbar
+
 .hero-unit khung đầu
 {
 	padding:0px; 	
@@ -104,11 +117,13 @@ border-radius:0;
 	border:none; // ko hộp
 	box-shadow:none;//ko có bóng
 }
+
 .navbar
 {
 margin-top: 30px;//cách top 1 khoảng
 	border-bottom:1px solid rgba(255,255,255,0.2) tạo đường kẻ ngang màu xám
 }
+
 .navbar .brand // dipped
 {
 	text-indent:-9999px;
@@ -116,11 +131,13 @@ margin-top: 30px;//cách top 1 khoảng
 	height:50px;//chiều cao
 	background:url(bootstrap/img/bracd.png) no-repeat; đường dẫn hình ko lập 
 }
+
 .navbar .nav
  {
 	padding:0; canh chỉnh vị trí
 	margin:0;
 }
+
 .navbar .nav > li > a // đinh dạng kiểu chử Home About Us ....
 {
 	font-weight:bold;//chữ đậm
@@ -129,16 +146,20 @@ text-shadow:none;// chữ ko có bóng
 	color:#ffff; màu chữ màu trắng
 	padding:3px 10px ; /khung cho chữ 
 }
+
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover
 {
 	color:rgba(255,255,255,0.7);// trỏ chuột sẽ chuyển màu màu xám
 }
+
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus
 {
 	box-shadow:none; //khung ko có bóng
 	background:rgba(0,0,0,0.7);//đổ màu nút Home khung màu đen
 }
+
 Hero-unit-inner
+
 .hero-unit-inner h1
 {	margin-top:50px;//khoảng cách trên
 	margin-bottom:20px; //khoảng cách dưới
@@ -146,22 +167,26 @@ Hero-unit-inner
 	color:#fff;	//màu chữ
 	text-shadow: 0 1px 0 //tạo bong  rgba(0,0,0,0.3) hiển thị độ bóng ;
 }
+
 .hero-unit-inner h4
 {
 	color:#cccccc;	chữ màu xám
 	text-shadow: 0 1px 0 rgba(0,0,0,0.3); tạo bóng cho chữ
 	margin-bottom:20px;// khoảng cách dưới
 }
+
 .hero-unit-inner  a
 {
 	margin-left:10px ;  // khoảng cách giữa 2 chữ
 	color : #fff;	//màu chữ sám
 	border-bottom:1px solid #ddd;  độ lớn cho đường viền dưới và màu cho chữ LearnMore
 }
+
 .hero-unit-inner img
 {
 	margin-top:30px;	khoảng cách từ botton tới hình
 }
+
 .hero-unit-inner .btn-primary
 {
 	background:#fb2f3a; màu nút

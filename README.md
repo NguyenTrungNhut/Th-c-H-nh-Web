@@ -185,6 +185,7 @@ Navbar
 }
 
 .navbar .nav > li > a // đinh dạng kiểu chử Home About Us ....
+
 {
 	font-weight:bold;//chữ đậm
 	

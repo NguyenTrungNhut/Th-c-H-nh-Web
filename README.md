@@ -1,26 +1,37 @@
 # Th-c-H-nh-Web
 14/12/2017
 Ctrt+g : group nhóm 
+
 Chuột phải smart object rùi quăng qua 
 
 Tạo 1 pattem
+
 Sau khi tô xong, nhấn Ctrl + A hoặc vào Selection > Select all để chọn tất cả. Vào menu Edit > Define pattern. Trong cửa sổ mới hiện ra, đặt tên cho pattern vừa tạo.
+
 Cắt hinh
 M rùi edit -> copy merged
+
 Thêm hinh
  chọn Image -> Image Size hoặc dùng tổ hợp phím tắt Ctrl + Alt + I.
+ 
 Copy hình và lấy size hình
 M rùi Ctrl + Shift + C
+
 Thay đổi kích thước hình
 M rùi Ctrl + Alt + C
+
 Tắt mở đường thước rule
 Ctrl + :
+
 Tắt mở ổ vuông 
 Ctrl + “
+
 Đổi màu background
 G
+
 Tham khảo code bootstrap
 http://getbootstrap.com/2.3.2/ 
+
 Khung sườn
 <div class="hero-unit">
 			<div class="container">
@@ -39,6 +50,7 @@ Khung sườn
 				</div>	
 			</div>
 		</div>
+		
 15/12/2017
 
 Code

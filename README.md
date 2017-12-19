@@ -58,6 +58,7 @@ Code
 Chỉnh font chữ cho những hinh
 
 @font-face
+
 {
 	font-family:'Museo';
 	src: url('bootstrap/js/exljbris - Museo-700.otf') format('truetype');
@@ -68,12 +69,15 @@ h1,h2,h3,h4,h5,h6
 	font-family:'Museo', Rockwell,Serif;
 }
 
+
 a
+
 {
 	color:#fb2f3a;// màu chữ
 }
 
 a:hover, a:focus
+
 {
 	color:#eb2f39;	
 	
@@ -86,6 +90,7 @@ a:hover, a:focus
 Button
 
 .btn
+
 {
         -webkit-border-radius:3px;
 	
@@ -110,6 +115,7 @@ Button
 }
 
 .btn:hover, .btn:focus
+
 {
 	background:#8e9093; // nền xám
 	
@@ -123,6 +129,7 @@ Button
 }
 
 .heading
+
 {
 
 	margin-bottom:20px;	// h4
@@ -132,6 +139,7 @@ Button
 Navbar
 
 .hero-unit khung đầu
+
 {
 	padding:0px; 	
 	
@@ -145,6 +153,7 @@ Navbar
 } 
  
 .navbar-inner // khung 
+
 {
 	//(padding : 40px 0; khung cách đầu web 1 khoảng)
 	
@@ -157,6 +166,7 @@ Navbar
 }
 
 .navbar
+
 {
 	margin-top: 30px;//cách top 1 khoảng
 
@@ -165,6 +175,7 @@ Navbar
 }
 
 .navbar .brand // dipped
+
 {
 	text-indent:-9999px;
 	
@@ -177,6 +188,7 @@ Navbar
 }
 
 .navbar .nav
+
  {
 	padding:0; canh chỉnh vị trí
 	
@@ -200,6 +212,7 @@ Navbar
 }
 
 .navbar .nav > li > a:focus, .navbar .nav > li > a:hover
+
 {
 
 	color:rgba(255,255,255,0.7);// trỏ chuột sẽ chuyển màu màu xám
@@ -232,6 +245,7 @@ Hero-unit-inner
 }
 
 .hero-unit-inner h4
+
 {
 	color:#cccccc;	chữ màu xám
 	
@@ -242,6 +256,7 @@ Hero-unit-inner
 }
 
 .hero-unit-inner  a
+
 {
 	margin-left:10px ;  // khoảng cách giữa 2 chữ
 	
@@ -252,6 +267,7 @@ Hero-unit-inner
 }
 
 .hero-unit-inner img
+
 {
 
 	margin-top:30px;	khoảng cách từ botton tới hình
@@ -259,6 +275,7 @@ Hero-unit-inner
 }
 
 .hero-unit-inner .btn-primary
+
 {
 	background:#fb2f3a; màu nút
 	

@@ -307,3 +307,243 @@ Hero-unit-inner
 	text-shadow:none; bóng chữ
 	
 }
+18/12/2017
+Process
+
+#process
+{
+
+	background:#eeeeee;// màu nền xám
+	border-bottom:#dddddd;//đường viền dưới xám nhạt
+	border-top: 1px solid #fff;
+	box-shadow:0 -3px 5px rgba(0,0,0,0.3);
+	position:relative;r
+	z-index:10; tạo đường bóng dưới nền
+	padding : 60px 0; // chỉnh khoảng không trên và dưới , trái phải ko tăng
+
+}
+
+.h-line
+{
+
+	max-height:5px; độ dài tối đa
+	background: url(bootstrap/img/line.jpg) repeat-x; hình nền
+	-webkit-border-radius:3px; 
+	-moz-border-radius:3px;   
+	border-radius:3px;       tạo đường tròn phía đầu đường thẳng
+	position:relative;
+	top:50px;
+	z-index:-1;
+}
+.process-icon
+{
+
+	margin-bottom:15px;// mở rộng khoảng không của icon
+	display:inline-block;  //hiển thị 1 khối
+	width:100px; // chiều rộng
+	height:101px;	//chiều cao
+	background:transparent url(bootstrap/img/process.png); hình nền
+	background-position: left top; vị trí hình  đầu
+	
+}
+.process-icon.idesign
+{
+
+	background-position:-100px top; // vi trí hình 2 
+}
+.process-icon.idevelop
+{
+
+	background-position:-200px top; // vi trí hình 3
+}
+.process-icon.ilaunch
+{
+
+	background-position:-300px top; // vi trí hình 4
+}
+Portfolio
+
+#portfolio
+{
+
+	padding: 60px 0;	 // khoảng cách trên dưới
+}
+.title
+{
+
+	margin-bottom:0; // canh chỉnh dưới
+}
+.category
+{
+
+	font-size:12px;  cở chữ 12
+	color:#999999; màu chữ	
+}
+
+Partners
+
+#partners
+{
+
+	padding:60px 0; kích cở 	
+	border-bottom:1px solid #ddd; tạo đường viền phía dưới Partner
+}
+
+Widgets
+
+#widgets
+
+{
+
+	padding: 50px 0 60px 0;  // kích thước của widget
+	border-bottom:1px solid #ddd;  đường viền				
+}
+.testimonials blockquote
+
+{
+
+	overflow:hidden;	//text bị tràng sẽ bị dấu đi
+}
+.testimonials blockquote p
+
+{
+
+	font-family: Grergia , Serif; // định dạnh kiêu chữ trong P
+	font-style:italic; chữ in nghiêng
+}
+.testimonials blockquote cite
+
+{
+
+	color:#333; màu cho chữ trong cite
+}
+.blog-lists
+{
+
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.blog-lists li, .tweet-lists li
+
+{
+
+	border-bottom:1px solid #ddd; // đường viền
+	padding: 20px 0;
+}
+.blog-lists li :first-child, .tweet-lists li :first-child
+{
+
+	padding-top:0;
+}
+.blog-lists li :last-child, .tweet-lists li :last-child
+
+{
+
+	border-bottom:0;
+}
+.blog-lists h5
+{
+	
+	padding:0;
+	margin:0;
+}
+.blog-lists h5 a 
+{
+
+	color:#333;// màu đen
+}
+.blog-lists h5 a:hover
+{
+
+	color:#444;
+}
+.tweet-lists
+{
+
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.tweet-lists li img
+{
+
+	margin-right:20px; canh chỉnh hình cách bên phải 20px
+}
+
+Footer
+
+Footer
+{
+
+	padding:60px 0;
+}
+.table
+{	
+
+	display: table;canh chỉnh giữa trang
+	
+	margin: 0 auto;
+}
+.footer-links li
+{
+
+	float:left;
+	margin-right: 40px;
+}
+.footer-links li a
+{
+
+	color:#666666;
+	font-size:12px;
+}	
+.footer-links
+{
+
+	list-style: none; 
+  	display: inline-block; chuyển chữ sang giữa
+}
+} 
+social
+#social
+{
+
+	clear : both;	
+	margin-bottom:40px;
+}
+.twitter
+{
+
+	background:#568ccc;
+	margin-left:5px;	
+}
+.twitter:hover , .twitter:focus
+{
+
+	background:#4f91bf;	
+}
+.facebook
+{
+
+	background:#2272a9;	
+}
+.facebook:hover , .facebook:focus
+{
+
+	background:#20699c;	
+}
+.social-spirte
+{
+
+	width:16px;
+	height:16px; 
+	display: inline-block;
+	background:transparent url(bootstrap/img/thumbnail/Social-sprite.png) no-repeat; // gắn hình nền
+	background-position:left top; vị trí hình	
+}
+.social-spirte.facebook
+{
+
+	background-position:-16px top;	hình 2
+}
+

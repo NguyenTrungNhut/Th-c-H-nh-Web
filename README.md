@@ -1,5 +1,6 @@
 # Th-c-H-nh-Web
 14/12/2017
+
 Ctrt+g : group nhóm 
 
 Chuột phải smart object rùi quăng qua 
@@ -51,7 +52,10 @@ Khung sườn
 			</div>
 		</div>
 		
+		
+		
 15/12/2017
+
 
 Code
 
@@ -307,7 +311,9 @@ Hero-unit-inner
 	text-shadow:none; bóng chữ
 	
 }
+
 18/12/2017
+
 Process
 
 #process
@@ -381,7 +387,11 @@ Portfolio
 }
 
 Partners
+
+
 19/12/2017
+
+
 #partners
 {
 

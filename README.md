@@ -34,9 +34,10 @@ Tham khảo code bootstrap
 http://getbootstrap.com/2.3.2/ 
 
 Khung sườn
+
 <div class="hero-unit">
 			<div class="container">
-				<div class="navbar">//chuyển khung nằm ngăng
+				<div class="navbar">//chuyển khung nằm ngang
 					<div class="navbar-inner">
 						<nav class="pull-right ">
 							<ul class="nav">

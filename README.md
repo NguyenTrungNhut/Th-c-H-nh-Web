@@ -547,3 +547,369 @@ social
 	background-position:-16px top;	hình 2
 }
 
+21/12/2017
+
+Code a Responsive Website Using HTML5 and CSS3
+Khung sườn
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> HTML5/CSS3 Responsive Theme</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<<meta name="viewport" content="width=device-width , initial-scale=1.0">
+</head>
+
+<body class="body">
+		
+	<header  class="mainheader">
+		<img src="img/logo.gif">
+		
+		<nav>
+			<ul>
+			<li class="active"><a href="#">Home</a></li>	
+			<li><a href="#">About</a></li>	
+			<li><a href="#">Portfolio</a></li>	
+			<li><a href="#">Contact</a></li>	
+			</ul>
+			
+		</nav>
+
+	</header><!-- /header -->	
+	<div class="mainContent">
+		<div class="content">
+			<article class="topcontent">
+				<header>
+					<h2><a href="#" title="Fist port"> Fist port</a></h2>
+				</header>
+				<footer>
+					<p class="port-info">This port is written by Christan</p>	
+				</footer>
+				<content>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</content>
+			</article>
+		</div>
+	</div>
+	<aside class="top-sidebar">
+		<article>
+			<h2>Top sidebar</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+		</article>
+	</aside>
+
+	<aside class="middle-sidebar">
+		<article>
+			<h2>Middle sidebar</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+		</article>
+	</aside>
+
+	<aside class="bottom-sidebar">
+		<article>
+			<h2>Bottom sidebar</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+		</article>
+	</aside>
+
+	<footer class="mainFooter">
+		<p>Copyright &copy ; <a href="#" title="1stwebdesigner"> </a>1stwebdesigner.com</p>
+		
+	</footer>
+</body>
+
+</html>
+
+Style
+Body
+{
+
+	background-image:url('img/bg.png'); //hình nền
+	color:#000305; màu nền
+	font-size:87.5% ;/* Base font size 14px*/ cở chữ
+	font-family: Asenal,'Lucida San Unicode'; kiểu chữ
+	line-height: 1.5;
+	text-align:left;  canh lề trái
+}
+.body
+{
+	
+	margin:0 auto;  canh chỉnh
+	width:70%;	độ dài
+	clear:both; trái phải của web ko đc float
+	
+}
+a
+{
+
+	text-decoration:none;
+}
+a:link,a:visited
+
+{
+
+	color:#CF5C3F; // chữ first và second thành màu đỏ
+	
+}
+a:hover,a:active
+
+{
+
+	background-color:#CF5C3F;  nền đỏ
+	color:#fff; chữ trắng khi trỏ chuột vào
+	
+}
+.mainheader img canh chỉnh hình
+
+{
+
+	width:30%; độ dài 		
+	height:auto;
+	margin:2% 0; khoảng cách trên dưới
+	
+}
+.mainheader nav khung
+
+{
+
+	background-color:#666; màu khung
+	height:40px;	 độ cao khung
+ 	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;   2 đầu khung
+	
+}
+.mainheader nav ul 
+
+{
+
+	list-style:none; bỏ dấu chấm
+	margin:0 auto; canh chỉnh
+	
+}
+.mainheader nav ul li trong khung
+
+{
+
+	float: left; hiển thị bên trái 
+	display: inline; 
+	
+}
+.mainheader nav a:link, .mainheader nav a:visited
+
+{
+
+	color:#fff; chữ màu trắng
+	display:inline-block;  hiển thị bên trong khung
+	padding: 10px 25px; khoảng cách mỗi chữ 
+	height: 20px; độ cao
+	
+}
+.mainheader nav a:hover, .mainheader nav a:active,.mainheader nav .active a:link chữ home, .mainheader nav .active a:visited
+
+{
+
+	background-color:#CF5C3F;
+	text-shadow:none;
+	
+}
+.mainheader nav ul li a tạo viền khung cong 4 góc
+
+{
+
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
+	
+}
+.mainContent
+
+{
+
+	line-height:25px;độ cao của chữ
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
+	
+}
+.content
+
+{
+
+	width:70%;  độ dài 
+	float:left;
+	
+}
+.topcontent khung chữ
+
+{
+
+	background-color:#fff; màu nền 
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
+	padding: 3% 5%; khoảng cách khung
+	margin-top:2% canh chỉnh khung
+	
+}
+.bottomcontent
+
+{
+
+	background-color:#fff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
+	
+}
+.top-sidebar
+
+{
+
+	width:21%;
+	float:left; 
+	background-color:#fff; nền trắng
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
+	margin: 1% 0 2% 3%; cách lề top 1  dưới 2 trái 3 phải 0
+	padding: 2% 3%;  tăng khoảng không trên dưới 2 trái phải 3%
+	
+}
+.port-info
+
+{
+
+	font-size:85%; cở chữ
+	color:#999; màu chữ 
+	font-style:italic; in nghiêng
+	
+}
+.middle-sidebar
+
+{
+
+	width:21%;
+	float:left;
+	background-color:#fff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
+	margin-left:3%;
+	margin-bottom:2%;
+	padding: 2% 3%;
+	
+}
+
+.bottom-sidebar
+
+{
+
+	width:21%;
+	float:left;
+	background-color:#fff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
+	margin-left:3%;
+	margin-bottom:2%; 
+	padding: 2% 3%;
+	
+}
+.mainFooter
+
+{
+
+	width:100%;
+	height:40px;
+	float:left;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
+	background-color:#666;
+	margin-top:2% 0; 
+	
+}
+.mainFooter p
+
+{
+
+	width:92%;
+	margin:1% auto; canh chỉnh
+	color:#fff; màu chữ
+	
+}
+
+Canh chỉnh khi thu nhỏ
+
+@media only screen and (min-width: 150px) and (max-width: 600px)  
+
+{
+
+	.body   canh giữa 
+	{
+	width:90%;
+	font-size:95%;
+	}
+	.mainheader img canh hình
+	{
+		width:100%; độ lớn full
+	}
+	.mainheader nav
+	{
+		height:160px; khung của các nút Home .... cao
+	}
+	.mainheader nav ul
+	{
+		padding-left:0;  khoảng không bên trái 0;
+	}
+	.mainheader nav ul li
+	{
+		width: 100%;	 độ rộng 100%
+		text-align:center; canh chỉnh chữ ở giữa hàng dọc
+	}
+	.mainheader nav a:link, .mainheader nav a:visited nền chữ home ...
+	{
+	
+		padding:10px 25px;	 thêm khoảng không 2 trên dưới và 2 bên trái phải
+		height:20px; 
+		display:block; phủ đầy khung theo tững hàng
+	}
+
+	.content
+	{
+		width:100%;
+		float:left;
+		margin-top:2%; canh chỉnh chữ cách khung chọn
+	}
+	.port-info
+	{
+		display:none; ẩn dòng chữ trong port-info
+	}
+	.topcontent
+	{
+		background-color:#fff;
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		border-radius:5px; 
+		padding: 3% 5%;
+		margin-top:2%;
+		margin-bottom:4%;
+	}
+	.bottomcontent
+	{
+		margin-top:3%;
+	}
+	.top-sidebar,.middle-sidebar,.bottom-sidebar
+	{
+		width:94%;
+		margin: 1% 0 2% 0%;
+		padding: 2% 3%;
+		
+	}
+
+}
+

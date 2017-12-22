@@ -924,7 +924,9 @@ Canh chỉnh khi thu nhỏ
 
 }
 23/12/2017
+
 Design an Agency Landing Page in Photoshop
+
 Step 1: Setting up the Document
 _ Bắt đầu bằng cách tạo một tài liệu 1400px x 1820px trong Photoshop.
 _ Công cụ Ruler là rất hữu ích cho hướng dẫn này đảm bảo rằng các thước đo và hướng dẫn được bật.
@@ -938,11 +940,13 @@ _ Tiêu đề của chúng ta sẽ chứa: a logo, call to action, navigation, s
 
 Step 2.1: 
 _Sữ dụng Rectangle Tool(U) with a fill color of #4d9543, create a dài 1400px  by cao 10px shape and place it on the very top of the canvas.
+
 Step 2.2:
 _ Đây là một biểu trưng cá nhân mà tôi sẽ sử dụng trong hướng dẫn này. Đối với văn bản Burnstudio,  sử dụng Myriad Pro 30pt, màu # 4d9543 và # 4a4a4a. Bạn có thể tạo thương hiệu riêng bằng cách sử dụng các cài đặt phông chữ này.
 
 _Một khi bạn đã hoàn thành nó, đặt logo 40px dưới hình dạng màu xanh lá cây.
   W : crtl+c crtl+v  
+  
 Step 2.3:
 _Mặt khác chúng ta hãy thêm  call to action. sử dụng Font là Kozuka Gothic Pro, 24pt. Nếu bạn không có phông chữ này cố gắng sử dụng Helvetica Thin / Light. Màu sắc sẽ là # 333333 và # 4d9543.
 
@@ -974,15 +978,20 @@ Step 2.9:
    
  
 Step 3: Working on Slider
+
 Step 3.1
+
 _The slider part  cao 300px và nằm dưới điều hướng 40px, vì vậy hãy tiếp tục và đo nó bằng Công cụ Ruler (I).
+
 Step 3.2:
 _Chọn công cụ Rectangle tròn (U) và tạo hình dạng giống như thể hiện trong hình bên dưới. Tạo một hình dạng 550px x 250px và tùy chỉnh góc dưới bên phải giống như trong ảnh chụp màn hình dưới đây bằng cách sử dụng Công cụ Hướng (A).
+
 Step 3.3:
 _Sử dụng công cụ Ellipse Tool (U) tạo hình dạng 160px x 160px. Đổ màu cho màu này không quan trọng bởi vì chúng tôi sẽ che mặt một hình ảnh ở trên nó sau. Đặt hình dạng này ở giữa góc dưới cùng bên phải.
  
 Step 3.4:
 _Tạo một hình dạng khác bằng cách sử dụng cùng một công cụ. Đảm bảo màu tô là # 000000 và thay đổi độ mờ xuống 80%. Với mục đích trình bày tôi đã làm cho nó một màu xanh lá cây để bạn có thể nhìn thấy hình dạng sẽ trông như thế nào. Kích thước hình là 575px x 88px.
+
 Step 3.5:
 _Chúng ta sẽ thêm the slider controls. Sử dụng công cụ Ellipse Tool (U) tạo 3  hình dạng  13 x 13px màu trạng thái bình thường sẽ là 	 và   active là # 4e9643. Đặt nó như thể hiện trong ảnh chụp màn hình dưới đây.
  
@@ -990,15 +999,19 @@ _Chúng ta sẽ thêm the slider controls. Sử dụng công cụ Ellipse Tool (
 Step 3.6:
 
 _Tiếp theo là nút trước đó và tiếp theo. Tôi tạo ra này bằng cách sử dụng Công cụ Bút chì (B). Màu trạng thái bình thường sẽ là # 4f4c4d và cho màu hoạt động cùng màu xanh lá cây. Đặt cái này như thể hiện trong hình bên dưới.
+
 Step 3.7:
 
 _Bây giờ chúng ta có tất cả các hình dạng với nhau, hãy điền nó với văn bản và thêm một hình ảnh. Tất cả bạn cần làm là tạo một lớp mới phía trên hình dạng và đặt hình ảnh của bạn ở đó, sau đó nhấp chuột phải và nhấp vào Tạo
 Clipping Mask. Làm tương tự trên hình elip. Tôi sẽ để nó cho bạn những gì bạn sử dụng hình ảnh
+
 Step 3.8:
 _Tiếp theo chúng ta hãy thêm văn bản. Đối với tiêu đề tiêu đề tôi đã sử dụng cùng một phông chữ như phần gọi hành động, sau đó đối với đoạn tôi sử dụng Helvetica 13pt, # 555555 và để đọc thêm tôi đã thực hiện Italic và sử dụng cùng một màu xanh lá cây và thêm một mũi tên bằng cách sử dụng Công cụ Bút chì ( B) bên cạnh nó.
 Step 4: Working on Services Area
+
 Step 4.1:
 _The service area sẽ cao hơn 240px và ở dưới thanh trượt 40px, vì vậy hãy tiếp tục và đo nó với Ruler Tool(I).
+
 Step 4.2:
 _Sử dụng công cụ Rectangle Rounded (U) với màu điền # f9f9f9 tạo một hình dạng như thể hiện trong ảnh chụp màn hình dưới đây.  
 
@@ -1010,10 +1023,13 @@ _Thêm văn bản và biểu tượng sau đây như hình bên dưới. Lưu ý
 Step 4.4:
 
 _Thêm bóng vào phần dưới cùng là rất đơn giản. Tất cả những gì bạn cần làm là sao chép hình dạng cơ bản và làm cho màu điền # 000000, đặt nó dưới lớp hình dạng ban đầu. Tiếp theo, vào Filter - Blur - Gaussian Blur đến 7.0, tạo một mặt nạ trên layer và chải lên phần mà chúng ta không nee
+
 Step 5: Working on Media Section
 This part will be divided into 3 sections Video, Twitter & Facebook.
+
 Step 5.1:
 _Chúng ta sẽ làm việc đầu tiên trên phần Video. Video sẽ chiếm 305px theo 220px và cùng khoảng cách từ trên. Đi tiếp và đo nó bằng công cụ Ruler (I).
+
 Step 5.2:
 _Sữ dụng ông cụ Rectangle Hình tròn (U) tạo một hình dạng 300px x 150px như thể hiện trong hình chụp dưới cùng với màu xanh lục giống nhau.
  
@@ -1021,13 +1037,11 @@ _Sữ dụng ông cụ Rectangle Hình tròn (U) tạo một hình dạng 300px 
 Step 5.3:
 
 Tiếp theo chúng ta hãy tạo một nút phát. Sử dụng công cụ Ellipse Tool (U) tạo một hình dạng 45px x 45px với màu điền # f5f5f5.
- 
- 
- 
-
 ta cũng đã thêm một biểu tượng phát tôi đã tạo bằng Pencil Tool(B) có cùng màu xanh lá cây.
+
 Step 5.4:
 Thêm một số văn bản với cùng một phông chữ, kích thước sẽ là 18pt và 14pt. Cuối cùng, thêm biểu tượng không khí macbook và đặt nó như thể hiện trong ảnh chụp màn hình bên dưới.
+
 Step 5.5:
 Bây giờ hãy thiết kế nguồn cấp dữ liệu Twitter. Chọn công cụ Rectangle tròn (U) thay đổi Radius đến 20px. Tạo một hình dạng 105px có chiều rộng, chiều cao không quan trọng. Bây giờ hãy điều chỉnh hình dạng bằng công cụ Pen Tool (P) và Direct Selection Tool (A) và tạo một hình dạng như hình bên dưới.
 
@@ -1039,24 +1053,34 @@ Bây giờ chúng ta hãy thêm văn bản và biểu tượng Twitter. Đặt n
 
 Step 5.8:
 Đối với widget Facebook không có gì đặc biệt tôi chỉ chụp một màn hình trong trang widget.
+
 Step 6: Working on Links, Blog, Location Section
+
 Step 6.1:
 _The footer  sẽ là 100px theo khoảng cách 320px và cách mặt tiền 50px, do đó hãy tiếp tục và đo nó bằng Công cụ Ruler (I). Sau đó, Điền toàn bộ không gian bằng Công cụ Hình Chữ nhật (U) với màu # 333333.
  
 Step 6.2:
 _Hãy tạo một mẫu chấm để áp dụng trong hình dạng. Tạo một tài liệu trong suốt 5px x 5px và tạo một dấu chấm ở phần dưới cùng bên trái của khung vẽ như thể hiện trong ảnh chụp màn hình dưới đây. Vào Edit - Define Pattern và áp dụng vào hình dạng với độ mờ 30%.
+
 Step 6.3:
 _Bây giờ chúng ta hãy làm việc trên các phần liên kết, tổng chiều rộng cho việc này sẽ là 225px. Tôi đã sử dụng cùng kiểu phông chữ và kích thước, các liên kết có khoảng cách 25px từ mỗi khác. _Khoảng cách của tiêu đề từ phía trên là 50px và 30px dưới đây. Ngoài ra, tôi tạo một mũi tên bằng cách sử dụng Pencil Tool(U)) và thêm nó bên cạnh các liên kết.
+
 Step 6.4:
 _Tạo một hình dạng 225px x 29px với màu điền # 000000, hạ thấp màu tô xuống 20%. Đặt nó như thể hiện trong ảnh chụp màn hình dưới đây.
+
 Step 6.5:
 _Bây giờ chúng ta hãy tiếp tục vào phần blog. Sử dụng công cụ Rectangle Rounded (U) tạo một hình dạng 292px x 58px như thể hiện trong hình bên dưới. Điền màu sắc sẽ là #ffffff và giảm opacity xuống 10%. Khoảng cách từ phần liên kết là 77px.
+
 Step 6.6:
 _Thêm biểu tượng và điền nó với văn bản bằng công cụ Text Tool (T). Đối với màu ngày #cccccc và cho liên kết là #ffffff.
+
 Step 6.7:
 _Đối với vị trí chỉ sao chép tiêu đề và thay đổi văn bản thành (Vị trí của chúng tôi). Thêm biểu tượng Bản đồ. Tôi đã tùy chỉnh bản đồ để hiển thị vị trí chính xác của tôi vì vậy hãy thoải mái tùy chỉnh bản đồ của bạn. Đối với màu văn bản sẽ là #cccccc và cho dòng # 484848
+
 Step 7: Working on Footer
+
 phần này rất đơn giản chỉ cần lấy một số Icons mẫu và desaturate nó bằng cách vào Image - Điều chỉnh - Desaturate hoặc bằng cách nhấn Ctrl + Shift + U. Phần này sẽ mất 145px chiều cao, do đó các biểu tượng phù hợp và chắc chắn nó là trung tâm. Điều cuối cùng là thêm 1px # c8c8c8 bên dưới và chúng tôi đã hoàn tất.
+
 Step 7.1:
 Kích thước văn bản 12pt, màu sắc đoạn # 666666, khoảng cách từ trên 30px, khoảng cách từ văn bản 15px.
 

@@ -1090,4 +1090,823 @@ Kích thước văn bản 12pt, màu liên kết # 666666, 2px # c8c8c8 đườn
 Step 7.3:
 Đối với nút quay lại đầu trang. Tôi tạo nó bằng công cụ Ellipse Tool (U), 30px x 30px. Tôi áp dụng đột qu 1 trong 1px #bdbdbd và tạo một mũi tên đối mặt với đầu bằng  Pencil Tool(B).
 
+25/12/2017
 
+Convert the Agency PSD into HTML
+Chúng ta sẽ viết mã này từ đầu và cuối cùng bạn sẽ có một bố cục cơ quan tuyệt vời và đầy đủ chức năng.
+
+Tài nguyên bạn sẽ cần Mã Website này:
+
+PSD Tải về
+SlidesJS
+Công cụ CSS: Đặt lại CSS
+
+Step 1: Preparation for the PSD to HTML Tutorial
+
+Chúng ta đều biết rằng trong việc chuyển đổi PSD sang HTML / CSS, chúng ta cần phải đi qua lại trong Photoshop (hoặc công cụ chỉnh sửa hình ảnh khác) để đo kích thước, khoảng cách và màu sắc. Vì vậy hãy đảm bảo bạn mở tệp PSD trong Adobe Photoshop.
+
+Tất nhiên bạn sẽ cần trình soạn thảo mã yêu thích và các công cụ gỡ lỗi. Tôi đã sử dụng Intype làm trình soạn thảo văn bản của tôi và để gỡ lỗi các công cụ tôi khuyên bạn nên Web Developer Toolbar và Firebug.
+
+Điều quan trọng là phải kiểm tra mã bằng cách sử dụng các trình duyệt khác nhau theo từng bước để chúng tôi có thể theo dõi mã của chúng tôi. Tôi đã sử dụng các kiểu CSS3 trong hướng dẫn này, mà nên hoạt động trong Chrome và Firefox. Đối với IE6 tin tưởng tôi, nó vẫn có vẻ tốt.
+Step 2: Getting Files Ready
+ 
+Bạn sẽ cần phải tạo một thư mục thư mục và bên trong của nó, bạn nên có / thư mục hình ảnh cho hình ảnh và thư mục js cho JavaScript. Tôi đã đặt tệp CSS vào thư mục gốc bao gồm tệp HTML. Ngoài ra chúng ta cần phải xuất khẩu các hình ảnh sẽ được sử dụng trong tập tin PSD. Ví dụ Biểu tượng, bạn sẽ cần phải chọn lớp từ bảng điều khiển lớp, sao chép và dán nó vào một tài liệu khác và CTRL + ALT + SHIFT + S để tiết kiệm cho web và thiết bị, loại tệp tin thích hợp cho biểu trưng nên là .png. Nhưng nếu bạn cảm thấy mệt mỏi khi làm việc này, bạn chỉ có thể tải xuống các tệp và sử dụng các hình ảnh tôi đã xuất.
+
+Step 3: Simple Starter Layout
+
+Để xây dựng bố cục HTML của chúng tôi, trước tiên chúng ta nên phân tích thiết kế của chúng tôi bằng cách nhìn vào bố cục của Photoshop và xác định các phần độc đáo.
+
+Background:
+
+ nền là màu trắng.
+Header:
+
+ Lưu ý rằng trong phần này tiêu đề có một đường màu xanh lá cây ở trên cùng bao gồm toàn bộ màn hình, do đó, để làm điều này, chúng ta cần phải quấn header với một container khác.
+The header contains logo, call to action, navigation and search.
+Slides:
+ the slider sẽ sử dụng SlideJS.
+Service:
+this section chứa 2 cột web design and vector design.
+Media
+this section chứa 3 cột for video, Twitter, and Facebook.
+
+Notice the above section slides, services, and media are positioned in the center, vậy chúng tôi sẽ gói chúng với div và đặt tên cho  container.
+ 
+
+Widget :
+this section  được chia thành 3 columns for links, blog, and location .Ngoài ra bạn sẽ nhận thấy nó được bao phủ bởi một mẫu màu xám chấm bao gồm toàn bộ màn hình.
+ 
+Client: 
+In this section bạn sẽ thấy có một đường viền màu xám rắn ở dưới cùng bao gồm toàn bộ màn hình và a list of clients logo.
+ 
+Footer:
+
+the footer được chia 2 columns  for copyright, footer links trở về đầu top arrow
+ 
+ 
+code
+<!doctype HTML>
+	<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title>Burnstudio</title>
+	  <link rel="stylesheet" href="style.css">
+	</head>
+<body>
+<div id="header-wrap" >
+		<header>
+			
+		</header>
+	</div> <!-- end header-wrap -->
+	<div id="container">
+		<div id=siders>
+			
+		</div><!-- end siders -->
+		<div id="service">
+			
+		</div><!-- end service -->
+		<div id="media">
+			
+		</div><!-- end media -->
+	</div><!-- end container -->
+	</div>
+	<div id="widget-wrap">
+		<div id="widget">
+			
+		</div><!-- end widget -->
+	</div><!-- end widget-wrap -->
+	<div id="client-wrap">
+		<div id="client">
+			
+		</div><!-- end client -->
+
+	</div><!-- end client-wrap -->
+
+	<footer>
+				
+	</footer><!-- end footer --></body>
+</html>
+
+Lưu ý rằng việc đặt tên các div trong mỗi phần dựa trên việc đặt tên chúng tôi đã làm trước đó khi chúng tôi phân tích bố cục PSD. Lưu ý rằng bố cục này có chiều rộng cố định là 960px. Tôi biết sẽ tốt hơn nếu sử dụng khung công tác CSS cho dự án này. Nhưng như tôi đã nói, chúng tôi sẽ làm điều đó từ đầu.
+Step 4: Working on Header Section
+Tập trung nhiều hơn vào the header section ,chúng ta sẽ đánh dấu các phần tử HTML có thể được tìm thấy trong phần này.
+code
+<div id="header-wrap" >
+
+		<header>
+			<h1> <a href="index.html" title="burnstudio">Burnstudio</a></h1>	
+				<div id="call">
+					<h3>(120) 345 6789</h3>
+					<h4 class="gree">Call us <strong>now</strong> </h4>
+				</div><!-- end call -->
+			<nav class="group">
+				<ul>
+					<li class="home"><a href="#">Home</a></li>
+					<li><a href="#">Service</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Testimonials</a></li>
+
+					<li class="last">
+						<div> <!--tạo thanh search và nút search-->
+							<input type="text" name="search" placeholder="search"/>
+							<input type="submit" name="search" value="go" class="search" />
+						</div>
+					</li>
+				</ul>
+			</nav>	
+		</header>
+	</div> <!-- end header-wrap -->
+
+
+Trong HTML ở trên tôi chỉ theo những gì tôi thấy trong Photoshop. Đầu tiên là Logo, vì logo có thể click được Tôi thêm <a> tag bên trong h2. Tiếp theo là the the call number trong một div với một id của cuộc gọi. Cuối cùng tôi tạo ra một danh sách <ul> có chứa liên kết và tìm kiếm.
+ Bây giờ hãy thêm CSS như sau: Tất cả CSS cần được thêm vào tệp style.css. Ngoài ra, hãy chắc chắn rằng bạn chỉ cần sao chép các thiết lập lại CSS mà tôi cung cấp trong các nguồn lực và đặt nó trong file style.css
+	
+Reset
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0; canh chinh 0
+	padding: 0; khoảng cách 0
+	border: 0; đường viền 0
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+
+{
+
+	display: block; // hiển thị thành 1 khối
+}
+Body
+
+{
+
+	line-height: 1; //thiết lập chiều cao giữa các dòng.
+}
+ol, ul 
+
+{
+
+	list-style: none;  //thiết lập kiểu cho một danh sách không
+}
+blockquote, q 
+{
+	quotes: none; // Không hiển thị các loại dấu bao ngoài khi nhúng một trích dẫn.
+}
+blockquote:before, blockquote:after,
+q:before, q:after 
+
+{
+
+	content: ''; //để chèn nội dung được tạo.
+	content: none; //không chèn
+}
+table 
+{
+
+	border-collapse: collapse; Khoảng trống giữa các đường viền (border) của table bị loại bỏ, chỉ còn đường viền duy nhất.
+	border-spacing: 0; //xác định khoảng cách đường viền của cách cột lân cân
+}
+/* END RESET */
+Font style:
+Body
+{
+
+	background: #fff; nền trắng
+	font-family: Helvetica, Arial, sans-serif; kiểu chữ
+	font-size: 13px; cở chữ
+}
+/* FONT STYLES*/
+h3
+{
+
+	font-size: 24px; cở chữ
+	font-family: Helvetica, Arial, sans-serif; kiểu chử
+	color: #333333; màu chữ
+	margin-bottom: 25px; canh lề dưới
+}
+h4
+{
+
+	margin-bottom: 25px;
+	font-size: 18px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+H1
+{
+
+	font-size: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+P
+{
+
+	font-size: 13px;
+	color: #555555;
+	line-height: 18px; khoảng cách chữ
+}
+a, a:link, a:visited //định dạng khi trước và sau khi click
+{
+
+	text-decoration: none; Định dạng văn bản bình thường, đây là dạng mặc định.
+	outline: none;
+}
+.green
+{
+
+	color: #509743;
+}
+.white
+{
+
+	color: #fff;
+}
+Strong
+{
+
+	font-weight: bold;
+}
+/* END FONTS STYLES */
+Header
+/* HEADER */
+#header-wrap
+{
+
+	border-top: 10px solid #4d9543; tạo đường viền trên xanh
+	padding-top: 40px; khoảng cách top 30
+}
+Header
+{
+	
+	width: 960px; độ rộng 
+	margin: 0 auto; canh chỉnh
+	padding: 0; khoảng cách
+}
+header h2 a
+{
+
+	display: block; hiển thị 1 khối 
+	text-indent: -999999px;
+	background: url(images/logo.png) no-repeat; đường link
+	width: 214px; đọ rộng
+	height: 77px; độ cao hình
+	float: left;
+	margin-bottom: 40px; khoảng cách từ hình tới khung xanh
+}
+#call
+{
+
+	float: right; vị trí bên phải
+	border-right: 1px solid #c8c8c8; tạo đường viền phải
+	padding-right: 25px; khoảng cách cách viền
+	margin-top: 20px; 
+}
+#call h3
+{
+
+	margin: 0; canh chỉnh
+}
+#call h4
+{
+
+	text-align: right; chữ bên phải
+	margin: 0; canh chỉnh
+}
+Nav
+{
+
+	clear: both; ko cần float trái hay phải
+	// độ cao và chiều rộng cũa khung
+	width: 960px; 
+	height: 50px;
+	// tạo khung tròn 2 đầu
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	background-color: #3b7c33; /* Fallback */ màu nền xanh
+	border-radius: 30px; độ bo 2 đầu
+	
+               màu từ nhạt tới đậm cho tất cả các trình duyệt
+
+	/* Safari 4+, Chrome 1-9 */
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5fae53), to(#3b7c33));
+	/* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -webkit-linear-gradient(top, #5fae53, #3b7c33);
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient(top, #5fae53, #3b7c33);
+	/* IE 10+ */
+	background-image: -ms-linear-gradient(top, #5fae53, #3b7c33);
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient(top, #5fae53, #3b7c33);
+	border: 1px solid #336c2b;
+}
+nav ul li 
+{
+
+	float: left; vị trí bên trái
+	border-right: 1px solid #336c2b; đường viền phải 
+	border-left: 1px solid #78c368; đường viền trái
+}
+nav ul li.home chuyển chữ Home thành hình
+{
+
+	border-left: none; ẩn đường viền  trái của chữ Home
+	text-indent: -9999px; khoảng cách chữ home thục vào đầu dòng
+	background: url(images/home.png) no-repeat 50% 50%;
+}
+nav ul li.last vùng search
+{
+
+	border-left: none; ẩn đường viền trái
+	border-right: none; ẩn đường viền phải
+	float: right; vị trí phải 
+	margin-right: 20px; khoảng cách bên phải cách 20
+}
+nav ul li a
+{
+
+	display: block; hiển thị hình
+	padding: 0 30px; khoảng cách trên dưới 0 trái phải cách nhau 30
+	height: 50px;  cao của hình home
+	line-height: 50px; khoang cách của chữ
+	font-size: 15px; cở chữ
+	color: #fff; mau chữ
+	text-shadow: 0 1px 0 #387031; bóng
+}
+nav ul li a:hover khi trỏ chuột vào chữ
+{
+
+	background: #5fae53; màu nền sẽ là màu xanh nhạt
+}
+nav ul li.home a:hover
+{	
+
+	// tạo hiệu ứng vòng bo bên trái khi trỏ chuột vào 
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	// hình nền khỉ trỏ chuột vào
+	background: #5fae53 url(images/home.png) no-repeat 50% 50%;
+}
+nav ul li div input[type=text]
+{	
+	
+	tạo khung bo trò 2 đầu nhỏ cho text
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	background: #4b9241;
+	
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #5ead52;
+	border-top: 1px solid #346d2c;
+
+	color: #fff; chữ trắng
+	//tạo bóng và khoảng cách của chữ
+	text-shadow: 0 1px 0 #387031;
+	padding: 5px 0 5px 20px;
+	width: 200px;
+}
+nav ul li div input[type=text]:focus
+{
+
+	outline: none;
+}
+/* TO STYLE PLACE HOLDER */
+Tạo search chữ trắng
+::-webkit-input-placeholder
+ {
+ 
+   color: #fff;
+}
+:-moz-placeholder 
+{
+
+   color: #fff;
+}
+nav ul li div input[type=submit]
+{
+
+	background: url(images/search.png) no-repeat 50% 50%; hình canh chỉnh hình
+	border: none; ẩn viền
+	text-indent: -999999px;
+	margin-left: 15px; canh chinh trái
+	height: 50px;độ cao
+	width: 16px; độ rộng
+}
+/* END HEADER */
+Giải thích Header
+Trong phần đầu CSS styled header-wrap với một đường viền màu xanh lá cây 10px, vì 1 div mặc định được tạo a block display width of the screen
+
+#header-wrap
+{
+
+	border-top: 10px solid #4d9543;
+	padding-top: 40px;
+}
+
+
+Sau đó, tôi trung tâm tiêu đề với lề: 0 tự động. Tiếp theo, tôi tạo mẫu Logo với chiều rộng và chiều rộng cố định. Tôi cũng thả nó sang bên trái.
+Header
+{
+
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+header h1 a
+{
+
+	display: block;
+	text-indent: -999999px;
+	background: url(img/logo.png) no-repeat;
+	width: 214px;
+	height: 77px;
+	float: left;
+	margin-bottom: 40px;
+}
+Đối với the Call  thả nó vào đúng và áp dụng một đường viền màu xám 1px cũng cách đệm 25px từ bên phải. Lưu ý rằng để có được giá trị này bạn cần phải quay trở lại Photoshop và sử dụng Công cụ Ruler (I) để đo khoảng cách. Vì tôi đã tạo kiểu h3 và h4 với biên dưới cùng 25px trong định dạng văn bản cơ sở của chúng tôi, chúng tôi cần phải đặt lại nó và thay đổi nó thành 0.
+#call{
+
+	float: right;
+	border-right: 1px solid #c8c8c8;
+	padding-right: 25px;
+	margin-top: 20px;
+}
+#call h3{
+
+	margin: 0;
+}
+#call h4{
+
+	text-align: right;
+	margin: 0;
+}
+Tiếp theo, tôi tạo the navigation  với chiều rộng, chiều cao và gradient cố định, tôi đã áp dụng một cách rõ ràng để xóa các biểu tượng nổi trên và gọi.
+nav{
+
+	clear: both; 
+	
+	width: 960px;
+	height: 50px;
+	
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	
+	background-color: #3b7c33; /* Fallback */	
+	border-radius: 30px;
+	/* Safari 4+, Chrome 1-9 */
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5fae53), to(#3b7c33));
+	/* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image: -webkit-linear-gradient(top, #5fae53, #3b7c33);
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient(top, #5fae53, #3b7c33);
+	/* IE 10+ */
+	background-image: -ms-linear-gradient(top, #5fae53, #3b7c33);
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient(top, #5fae53, #3b7c33);
+	
+	border: 1px solid #336c2b;
+}
+Tất cả các li được thả nổi bên trái trừ phần tử li cuối cùng, cũng có một đường viền trái và phải, ngoại trừ ngôi nhà không có đường viền trái và đường cuối cùng không có đường viền phải.
+nav ul li
+{
+
+	float: left; 
+	border-right: 1px solid #336c2b;
+	border-left: 1px solid #78c368;
+}
+nav ul li
+{
+
+	float: left; 
+	border-right: 1px solid #336c2b;
+	border-left: 1px solid #78c368;
+}
+nav ul li.home
+{
+
+	border-left: none;
+	text-indent: -9999px;
+	background: url(img/home.png) no-repeat 50% 50%;
+}
+nav ul li.last
+{
+
+	border-left: none;
+	border-right: none;
+	float: right;
+	margin-right: 20px;
+}
+Tất cả các pad pad 30px theo kiểu từ trái sang phải 0 cho trên cùng và dưới cùng, chiều cao là 50, bóng chéo, chiều cao 50 để làm cho nó thẳng đứng theo chiều dọc. Đối với lớp học nhà tôi đẩy ra các văn bản và thay thế nó với các biểu tượng nhà.
+nav ul li a
+{
+
+	display: block; 
+	padding: 0 30px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	color: #fff;
+	text-shadow: 0 1px 0 #387031;
+}
+Kể từ khi góc được làm tròn, chúng ta cần phải chỉ định một phong cách hover khác cho nút home đó là những gì tôi làm dưới đây: hover.
+nav ul li a:hover
+{
+
+	background: #5fae53;
+}
+nav ul li.home a:hover
+{
+
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	
+	background: #5fae53 url(img/home.png) no-repeat 50% 50%;
+}
+Cuối cùng, tôi tạo kiểu đầu vào tìm kiếm có bán kính tròn, nền xanh lá cây, đường viền đen trên đường viền trên cùng và dưới đáy. Ngoài ra để nhắm mục tiêu thuộc tính thuộc tính tham khảo CSS mà tôi nhận xét để phong cách giữ chỗ này là một phần của tài sản css3.
+nav ul li div input[type=text]
+{
+
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	background: #4b9241;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #5ead52;
+	border-top: 1px solid #346d2c;
+	color: #fff; 
+	text-shadow: 0 1px 0 #387031;
+	padding: 5px 0 5px 20px;
+	width: 200px;
+}
+nav ul li div input[type=text]:focus
+{
+
+	outline: none;
+}
+::-webkit-input-placeholder
+ {
+ 
+   color: #fff;
+}
+:-moz-placeholder 
+{
+
+   color: #fff;
+}
+nav ul li div input[type=submit]
+{
+
+	background: url(img/search.png) no-repeat 50% 50%;
+	border: none;
+	text-indent: -999999px;
+	margin-left: 15px;
+	height: 50px;
+	width: 16px;
+}
+Trước khi xem trước các phiên bản thấp hơn của IE, đảm bảo sao chép và dán mã dưới đây vào phần tiêu đề của tệp HTML của chúng tôi. Điều này sẽ cho phép các phần tử HTML5 hoạt động trong các trình duyệt IE cũ hơn.
+Step 5: Working on Slider Section
+Now let’s add the content inside the slides element, here’s the HTML:
+Code
+
+
+<div id="container">
+		<div id=slides>
+			<div class="slides_container">
+				<div>
+					<img src="img/slide1.png" alt="slide1" />
+					<div class="slide-right">
+						<h1 class="slide-heading">Artthatworks 1 dolor sit amet, consectetur adipiscing elit.</h1>
+						Vestibulum a diam lorem. Fusce viverra commodo rhoncus. Nam ipsum magna, faucibus non semper et, vestibulum quis arcu. Nulla in tellus eu nunc cursus scelerisque ac nec nibh.
+						<a href="#" class="readmore">Read more</a>
+					</div><!-- end side-right -->
+				</div>
+				<div>
+					<img src="img/slide1.png" alt="slide1" />
+					<div class="slide-right">
+						<h1 class="slide-heading">Artthatworks 2 dolor sit amet, consectetur adipiscing elit.</h1>
+						Vestibulum a diam lorem. Fusce viverra commodo rhoncus. Nam ipsum magna, faucibus non semper et, vestibulum quis arcu. Nulla in tellus eu nunc cursus scelerisque ac nec nibh.
+						<a href="#" class="readmore">Read more</a>
+					</div><!-- end side-right -->
+				</div>
+				<div>
+					<img src="img/slide1.png" alt="slide1" />
+					<div class="slide-right">
+						<h1 class="slide-heading">Artthatworks 3 dolor sit amet, consectetur adipiscing elit.</h1>
+						Vestibulum a diam lorem. Fusce viverra commodo rhoncus. Nam ipsum magna, faucibus non semper et, vestibulum quis arcu. Nulla in tellus eu nunc cursus scelerisque ac nec nibh.
+						<a href="#" class="readmore">Read more</a>
+					</div><!-- end side-right -->
+				</div>						
+			</div><!-- end slides_container -->
+		</div><!-- end siders -->
+Trong đánh dấu HTML ở trên tôi đã thêm một lớp slides_container sẽ giữ các phần tử trang trình bày của chúng tôi được bao bọc bởi một div có chứa một hình ảnh, một lớp div của trang trình bày bên phải chứa tiêu đề trang trình bày, thông tin, và liên kết nhiều hơn.
+
+Tôi cũng đã thêm một class slide-heading , thông tin the read more readmore. Điều này sẽ hữu ích vì chúng ta sẽ lặp lại mã HTML 3 lần và chúng sẽ có cùng kiểu nếu chúng ta thêm CSS sau.
+Now let’s style all the element, here’s the CSS.
+#container
+{
+	width: 960px; độ rộng của phần slides
+	margin: 0 auto;
+}
+/* SLIDES */
+#slides
+{
+
+	position: relative; vị trí tuyệt đối
+	margin-top: 40px; cách top 40
+}
+.slides_container
+{
+
+	height: 315px;
+}
+.slide-right
+{
+
+	position: absolute; định vị theo thành phần bên ngoài
+	top: 0;
+	left: 385px; cách trái
+}
+.slide-heading
+{
+
+	background: url(images/slide-heading.png) no-repeat; hình
+	width: 494px; độ rộng 
+	height: 68px;chiều cao
+	color: #fff; chữ trắng
+	font-size: 24px; cở chữ
+	khoảng cách chữ trên và trái
+	padding-top: 20px;
+	padding-left: 80px;
+	canh chỉnh trên dưới
+	margin-top: 35px;
+	margin-bottom: 30px;
+}
+.slide-right .info
+{
+
+	width: 395px; độ rộng
+	margin-bottom: 20px; canh dưới
+	margin-left: 155px; canh trái
+}
+.slide-right .readmore
+{
+
+	margin-left: 155px; canh trái
+}
+.readmore
+{
+
+	font-style: italic; kiểu in nghiêng
+	text-decoration: none; trang tri rổng
+	color: #509743; màu
+	padding-left: 15px; thêm khoảng cách trái
+	background: url(images/more.png) no-repeat 0 50%; hình
+}
+.readmore:hover
+{
+
+	color: #c8c8c8; màu chữ khi trỏ chuột vào
+}
+.pagination
+{
+
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+	z-index: 99;
+}
+ul.pagination li
+{
+
+	float: left; nằm bên trái
+	margin-right: 10px; canh phải 10px
+	background: url(images/pagination.png) no-repeat; hình
+	background-position: top; 
+	width: 14px; độ rộng của hình
+	height: 15px; độ cao của hình
+}
+ul.pagination li.current
+{
+
+	background-position: bottom; vị trí bi xanh
+}
+ul.pagination li a
+{
+
+	display: block; hiển thị theo khối
+	text-indent: -999999px; ẩn chữ
+}
+a.next
+{
+
+	position: absolute;
+	right: 25px; cách phải
+	bottom: 30px; cách dưới
+	display: block; hiển thị 
+	width: 7px; độ rộng
+	height: 13px; độ cao
+	background: transparent url(images/prev-next.png) no-repeat; hình
+	background-position: top right; hình phải
+	text-indent: -9999px;
+}
+a.prev
+{
+
+	position: absolute;
+	right: 50px;
+	bottom: 30px;
+	display: block;
+	width: 7px;
+	height: 13px;
+	background: transparent url(images/prev-next.png) no-repeat;
+	background-position: top left; hình trái
+	text-indent: -9999px;
+}
+a.next:hover
+{
+
+	background-position: bottom right; hình phải
+}
+a.prev:hover
+{
+
+	background-position: bottom left; hình trái
+}
+/* END SLIDES*/
+
+Trong CSS ở trên kể từ khi các trang trình bày, dịch vụ và phương tiện được gói với div bộ chứa, chúng tôi sẽ tạo kiểu này trước để làm cho chúng căn giữa. Tiếp theo, vị trí của slide được thiết lập để tương đối để làm cho nó thành phần cha mẹ.
+Điều này hữu ích để chúng ta có thể định vị các phần tử bên trong prev, Next và Pagination hoàn toàn được tự động tạo ra bởi JavaScript. Đối với các slides_container tôi đã cho nó một chiều cao cố định 315px đó bằng chiều cao của hình ảnh trượt.
+Đối với phần trượt bên phải chứa tiêu đề, thông tin và chi tiết, tất cả các vị trí hoàn toàn, 0 trên đầu, và đẩy nó 385px từ trái.
+
+
+Đối với phần đầu chiếu, tôi cho nó một chiều rộng và chiều cao cố định bằng hình nền, và cho nó một padding để làm cho văn bản căn chỉnh đúng, cũng là một lề để cung cấp cho một không gian và align nó một cách chính xác.
+
+
+Đối với. Thông tin tôi đã cho nó một chiều rộng cố định với lề để sắp xếp nó. Đối với .readmore đầu tiên tôi đã cho nó một phong cách margin riêng biệt vì chỉ có thanh trượt readmore có này và tất cả các liên kết readmore trong cách bố trí không có lề từ trái. Tiếp theo là kiểu dáng readmore có màu xanh lục với mũi tên trên nền và một con trỏ màu xám.
+
+
+Đối với các nút phân trang, trước và tiếp theo đây là tự động tạo ra bởi JavaScript để kiểu này trước tiên chúng ta cần xác định thẻ là gì hoặc thuộc tính lớp html được áp dụng.
+
+
+Để thực hiện việc này, bạn cần phải sử dụng công cụ Firebug nếu bạn đang sử dụng Firefox, nếu bạn đang sử dụng Chrome chỉ cần nhấp chuột phải vào phần tử và nhấp vào Kiểm tra phần tử hộp thoại sẽ xuất hiện và bạn có thể thấy có yếu tố nào đang được sử dụng.
+
+
+Bây giờ bạn đã biết phần tử, chúng ta sẽ nhắm mục tiêu nó trong CSS. Đối với các Ghinits tôi đặt nó hoàn toàn, đặt nó 25px từ dưới cùng và trái, tôi cũng áp dụng z-index 99px - điều này sẽ làm cho pagination ngay trên đầu trên các yếu tố khác.
+
+
+Nếu chúng tôi sẽ không áp dụng thông báo này vì nó không thể nhấp được vì hình ảnh nằm trên đầu trang của bộ phận pagination. Sau đó, tôi di chuyển các phần tử li phân trang sang trái, cho nó một lề phải 10px, thêm một hình nền với chiều rộng cố định và chiều cao.
+
+Tôi đặt nền theo mặc định lên trên cùng vì hình trạng thái bình thường nằm ở trên, cho trạng thái hiện tại hoặc trạng thái hoạt động, chúng ta sẽ đảo ngược vị trí từ trên xuống dưới và cuối cùng hiển thị nó như một phần tử cấp khối và giấu văn bản.
+
+
+Đối với .next và .prev khá nhiều giống như chúng ta đã làm trong pagination nhưng lần này nó được đặt bên phải.
+
+
+Chú ý the prev-next.png ở bên trái hình này chứa hình ảnh của nút prev và phía bên phải hình này chứa hình ảnh của nút tiếp theo.
+
+
+Tôi đã định vị  the .next image to top right, .prev positioned to top-left, and for the hover just change the top to bottom..
+
+
+Bây giờ, hãy thêm tập lệnh jQuery được yêu cầu vào tiêu đề. Sao chép tệp tin slides.min.jquery.js từ thư mục nguồn / và dán nó vào thư mục / js của chúng tôi.
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+ <script src="js/slides.min.jquery.js"></script>
+
+
+Finally, we need to add the JavaScript code that will allow the slider to work on our layout. You should add this script just before the . Here’s the JavaScript.
+
+<script>
+$(function(){$('#slides').slides({preload: true,generateNextPrev: true,});});
+</script>
+
+
+<script>
+$(function(){$('#slides').slides({preload: true,generateNextPrev: true,});});
+</script>
+ 

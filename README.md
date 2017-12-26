@@ -1909,4 +1909,182 @@ $(function(){$('#slides').slides({preload: true,generateNextPrev: true,});});
 <script>
 $(function(){$('#slides').slides({preload: true,generateNextPrev: true,});});
 </script>
+
+ 26/12/2017
+ Step 6: Working on Service Section
+Now let’s add the content inside the service element, here’s the HTML.
+
+Code 
+
+<div id="service">
+			<div id="web">
+				<img src="img/web.png">	
+				<h3>Web <strong>Design</strong></h3>
+				<p>Vestibulum a diam lorem. Fusce viverra commodo rhoncus. Nam ipsum magna, faucibus non semper et, vestibulum quis arcu. Nulla in tellus eu nunc cursus scelerisque ac nec nibh.</p>
+				<p><a href="#" class="readmore">read more</a></p>
+			</div><!-- end web -->
+			<div id="Vector">
+				<img src="img/vector.png">	
+				<h3>Vector <strong>Design</strong></h3>
+				<p>Vestibulum a diam lorem. Fusce viverra commodo rhoncus. Nam ipsum magna, faucibus non semper et, vestibulum quis arcu. Nulla in tellus eu nunc cursus scelerisque ac nec nibh.</p>
+				<p><a href="#" class="readmore">read more</a></p>
+			</div><!-- end vector -->	
+		</div><!-- end service -->
+Now let’s style all the element, here’s the CSS.
+
+/* SERVICE */
+#service
+{
+
+	margin: 40px auto;  canh chỉnh top và bottom 40 
+	height: 250px;
+	padding-top: 30px; cách khoảng 30
+	background: url(img/service-bg.jpg) no-repeat;
+}
+#web
+{
+
+	float: left;		vị trí trái
+	width: 450px;		độ rông
+	padding-left: 30px;	khoảng cách bên trái
+}
+#web p
+{
+
+	width: 260px;
+	margin-bottom: 20px;
+}
+#web img
+{
+
+	float: right;
+	margin-right: 50px;
+}
+#vector
+{
+
+	float: right;
+	padding-left: 30px;
+	width: 450px;
+}
+#vector p
+{
+
+	width: 260px;
+	margin-bottom: 20px;
+}
+#vector img
+{
+
+	float: right;
+	margin-right: 50px;
+}
+/* END SERIVCE*/
+
+ The service div 40px từ trên xuống dưới và thêm một ô bên trái và bên phải  tôi cũng thêm một chiều cao tương đương với hình nền. Đối với web div tôi thả nó vào bên trái và cho nó một chiều rộng 50% của  the parent  div, cùng với div vector, nhưng thả nổi ở bên phải.
+Đối với đoạn văn tôi đã cho nó một chiều rộng cố định với một lề, cho hình ảnh tôi thả nó ngay và cho nó một lề phải, khá nhiều giống nhau trên hình ảnh vector và văn bản.
  
+Step 7: Working on Media Section
+Code
+
+<div id="media" class="group">
+			<div id="video">
+				<h4>Quick <strong>Video Tour</strong></h4>
+				<h5>How we Design our work! </h5>
+				<a href="#" class="play"><img src="img/play.png" alt="play"></a>
+			</div><!-- end video -->
+			<div id="twitter">
+				<h4>Twitter <strong><span class="green">Feed </span> </strong> </h4>
+				<h5>Mashable Video: Principal Resigns After Allegedly Posing as a Student on Facebook
+				<a href="#" class="t-link">-http://on.mash.to/IVYWYJ</a></h5>				
+				<p>9 hours ago</p>
+			</div><!-- end twitter -->
+			<div id="faceboolk">
+				<h4>Likes Us On <strong><span class="green">Facebook</span> </strong></h4>
+
+			</div><!-- end facebook -->
+		</div><!-- end media -->
+		
+tạo ra 3 phần khác nhau: div video có chứa tiêu đề văn bản h4, h5 và một hình ảnh có thể nhấp cho nút phát, twitter div chứa tiêu đề và đoạn văn, cuối cùng là div của facebook có chứa tiêu đề và nếu bạn muốn thêm tiện ích của mình, bạn có thể thêm nó bằng cách vào Facebook plugins.
+Ngoài ra, tôi đã thêm một nhóm lớp trên phương tiện truyền thông div. Tôi sẽ chỉ cho bạn điều đó khi chúng tôi chuyển sang CSS.
+Now let’s style all the elements, here’s the CSS.
+/* MEDIA  */
+#media
+{
+
+width:960px;
+	margin: 0 auto;
+}
+#video
+{
+
+	width: 302px;
+	padding-top: 20px;
+	float: left;
+	margin-right: 58px;
+	background: transparent url(images/video-bg.png) no-repeat;
+	height: 225px;
+}
+#video  h4
+{
+
+	margin: 0;
+}
+#video h4, #video h5
+{
+
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 1px 0 #387031;;
+}
+#video .play
+{
+
+	float: right;
+	margin-top: 5px;
+}
+#twitter
+{
+
+	width: 285px;
+	height: 180px;
+	float: left;
+	margin-right: 30px;
+	background: transparent url(images/twitter-bg.png) no-repeat;
+	background-position: bottom;
+	padding: 0 0 20px 0;
+}
+#twitter p
+{
+
+	padding: 0 20px;
+}
+#twitter .time 
+{
+
+	font-size: 11px;
+	font-style: italic;
+	color: #999999;
+	margin-top: 15px;
+}
+a.t-link{ color: #6767c9; text-decoration: none; }
+a.t-link:hover{ text-decoration: underline; }
+#facebook
+{
+
+width: 285px;
+float: right;
+}
+/* END MEDIA*/
+/* CLEAR FIX */
+.group:after
+ {
+ 
+  content: "";
+  display: table;
+  clear: both;
+}
+/* END FIX */
+
+
+

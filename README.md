@@ -2086,5 +2086,635 @@ float: right;
 }
 /* END FIX */
 
+27/12/2017
 
+Step 8: Working on Widget Section
+
+Now let’s add the content inside the widget element, here’s the HTML.
+
+code
+
+<div id="widget-wrap" class="group">
+		<div id="widget">
+			<div id="links" class=group>
+				<h4 class="white">Other <strong>links</strong></h4>
+				<ul>
+					<li><a href="#">www.example.com</a></li>
+					<li><a href="#">www.1stwebdesigner.com</a></li>
+					<li><a href="#">www.labzip.com</a></li>
+					<li><a href="#">www.samplelink.com</a></li>
+					<li><a href="#">www.outgoinglink.com</a></li>
+					<li><a href="#">www.link.com</a></li>
+				</ul>
+			</div><!--end links-->
+			<div class="blog">
+				<h4 class="footer-header white">Latest From The <strong>Blog</strong></h4>
+				<img src="img/blog.png" alt="blog">
+				<p>Maecenas iaculis lorem vel dui vulputate non consequat mi congue.
+				05.30.2012
+				</p>
+				<a href="#" class="readmore">read more</a>
+			</div><!--end blog-->
+			<div class="location">
+				<h4 class="footer-header white">Our <strong>Location</strong></h4>
+				<img src="img/map.png" alt="map">
+				<p>123 unknown street, address
+				</br> 8600 Philippnes
+				</p>
+			</div><!-- end location -->
+		</div><!-- end widget -->
+	</div><!-- end widget-wrap -->
+
+
+Tôi đã thêm một nhóm lớp vào widget-wrap, bạn đã biết lớp này làm gì. Tiếp theo, tôi tạo 3 liên kết div có chứa một danh sách không có thứ tự, blog có chứa một tiêu đề, hình ảnh, tiêu đề, ngày và đọc thêm liên kết. Cuối cùng, vị trí chứa hình ảnh và địa chỉ.
+
+Now let’s style all the element, here’s the CSS.
+code
+
+/* WIDGET */
+
+#widget-wrap
+{
+
+	border-top: 2px solid #c8c8c8;
+	padding: 50px 0;
+	background: #333333 url(img/widget-bg.jpg);}
+#widget
+{
+
+	width: 960px;
+	margin: 0 auto;
+}
+h4.footer-header
+{
+
+	background: transparent url(img/footer-header.png) no-repeat; chèn hình cho blog và loca
+	line-height: 58px; độ lớn hình
+	text-indent: 30px; canh chinh chử
+}
+#links
+{
+
+	width: 225px; độ dài
+	float: left;
+	margin-right: 75px; canh chỉnh phải
+}
+#links ul
+{
+
+	list-style-image: url(images/links.png); hình nền
+	margin-left: 15px; canh trái
+}
+#links ul li a chữ
+{
+
+	color: #cccccc; màu
+	font-size: 13px;
+	padding: 8px 0; canh chỉnh
+	display: block;
+}
+#links ul li a:hover
+{
+
+	color: #fff;
+}
+#blog
+{
+
+	position: relative; định vị tuyệt đối
+	width: 290px;
+	float: left;
+	margin-right: 75px;
+}
+#blog img
+{
+
+	position: absolute; định vị theo chữ
+	top: 50px;
+	left: -18px;
+}
+#blog p.title canh chỉ cho chữ
+{
+	color: #fff;
+	margin-left: 110px;
+	margin-bottom: 15px;
+}
+#blog p.date
+{
+
+	margin-left: 110px;
+	color: #cccccc;
+	font-style: italic;
+	font-size: 11px;
+	margin-bottom: 15px;
+}
+#blog a.readmore
+{
+
+	margin-left: 110px;
+}
+#location
+{
+
+	position: relative;
+	width: 290px;
+	float: right;
+}
+#location img
+{
+
+	position: absolute;
+	top: 45px;
+	left: 22px;
+}
+#location p.address canh chỉnh chữ
+{
+
+	margin-top: 110px;
+	border-right: 1px solid #484848; đường viền phải
+	padding-right: 20px;
+	text-align: right;
+	color: #cccccc;
+}
+/* END WIDGET */
+
+widget-wrap div với một padding của 50px trên và dưới cùng và thêm một nền màu xám chấm. Đối với div của widget, tôi đã đặt chiều rộng 960px và đặt nó ở giữa. Đối với liên kết div tôi cho nó một chiều rộng 225px, thả nó sang trái và cho nó một lề phải 75px, cho danh sách ul.
+
+Thêm một hình nền, tôi cũng tạo kiểu tóc với một màu xám nhạt hơn và lơ lửng trắng (tôi không theo dõi hiệu ứng hover trong thiết kế PSD).
+
+Đối với div blog   cho nó một chiều rộng 290px, thả nó sang trái, áp dụng một lề 75px và vị trí tương đối. Đối với nhóm tôi đã thêm một backround, thụt lề văn bản, và thêm 58px chiều cao dòng để làm cho các văn bản trung tâm theo chiều dọc.
+
+Đối với blog img vì chúng tôi chỉ đặt blog div vào vị trí tương đối, chúng tôi có thể đặt vị trí này hoàn toàn vào vị trí hình ảnh giống với thiết kế psd còn lại 18px. Đối với các .title, .date và .readmore họ có cùng lề từ trái. Đối với vị trí cũng như trong blog, nơi nó được đặt tương đối và vị trí hình ảnh bên trong hoàn toàn, và cho địa chỉ tôi đã thêm lề và paddings và cho nó một biên giới 1px ở bên phải
+ 
+Step 9: Working on Client Section
+Now let’s add the content inside the client element, here’s the HTML.
+
+Code
+
+<div id="client-wrap" class="group">
+		<div id="client">
+			<ul>
+				<li><img src="img/client-1.jpg"></li>
+				<li><img src="img/client-2.jpg"></li>
+				<li><img src="img/client-3.jpg"></li>
+				<li><img src="img/client-4.jpg"></li>
+				<li><img src="img/client-5.jpg"></li>
+			</ul>		
+		</div><!-- end client -->
+
+	</div><!-- end client-wrap -->
+Trong HTML ở trên, tôi đã thêm một lớp nhóm vào div khách hàng và thêm một phần tử danh sách không có thứ tự chứa một hình ảnh.
+Now let’s style all the element, here’s the CSS.
+Code
+/* CLIENT */
+
+#client-wrap
+{
+
+	background: #fff url(images/client-bg.jpg) repeat-x; chèn hinhg
+	padding: 40px 0;
+	border-bottom: 1px solid #c8c8c8;đường viền dưới
+}
+#client
+{
+
+	width: 960px;
+	margin: 0 auto;
+}
+#client ul li
+{
+
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+/* END CLIENT */
+
+
+
+Trong CSS ở trên, tôi đã tạo kiểu dải quấn khách hàng bằng cách thêm một nền gradient màu xám nhỏ, đệm phía trên và dưới 40px và thêm một đường viền cuối cùng màu xám rắn. Tôi đặt trung tâm div khách hàng và cuối cùng cho các yếu tố danh sách có thứ tự có chứa các hình ảnh tôi thả nó trái, vì chúng tôi có 5 hình ảnh tôi chia nó đều bằng cách cho một chiều rộng 20% của mỗi phần tử, cuối cùng tôi áp dụng text-align để làm cho trung tâm hình ảnh.
+Step 10: Working on the Footer Section
+
+Now let’s add the content inside the footer element, here’s the HTML.
+
+<footer>
+		<div id="footer-left">
+			<p> Copyright <a href="#" class="green">www.1stwebdesigner.com</a> 
+			</br></p>
+			<p>Designed by <a href="#" class="green">Michael Burns</a></p>
+		</div>	<!-- end footer-left -->
+		<div id="footer-right">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Testimonials</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</div><!-- end footer-right -->
+	
+	</footer><!-- end footer -->
+
+
+Ở trên, thêm một nhóm lớp vào footer, sau đó tạo ra 2 phần đầu tiên là footer-trái chứa văn bản bản quyền, tiếp theo chân phải có chứa một liên kết danh sách không có thứ tự. Cuối cùng  thêm vào có thể nhấp vào hình ảnh hàng đầu. Bây giờ chúng ta hãy sắp xếp tất cả các phần tử, 
+Now let’s style all the element, here’s the CSS.
+/* FOOTER */
+Footer
+{
+
+	clear: both;
+	width: 960px;
+	margin: 0 auto;
+	padding: 30px 0 60px 0;
+	position: relative;
+}
+#footer-left
+{
+
+	float: left;
+	width: 50%;
+}
+#footer-left p
+{
+
+	font-size: 12px;
+	color: #666666;
+}
+#footer-left a:hover
+{
+
+	color: #c8c8c8;
+}
+#footer-right
+{
+
+	float: right;
+	width: 50%;
+}
+#footer-right ul
+{
+
+	float: right;
+}
+#footer-right ul li
+{
+
+	float: left;
+	margin-right: 30px;
+}
+#footer-right ul li:last-child
+{
+
+	margin-right: 0;
+}
+#footer-right ul li a
+{
+
+	color: #666666;
+	display: block;
+	padding-bottom: 10px;
+	font-size: 12px;
+}
+#footer-right ul li a:hover
+{
+
+	border-bottom: 2px solid #c8c8c8;
+}
+.back-top
+{
+
+	position: absolute;
+	bottom: 30px;
+	right: 50%;
+
+}
+/* END FOOTER */
+
+Trong CSS ở trên, tôi đã tạo kiểu footer bằng cách đưa ra chiều rộng 960px, căn giữa nó, áp dụng một phần đệm dài 30px và đáy 60px, cuối cùng tôi đã đặt nó ở vị trí tương đối.
+
+Đối với chân trái và chân phải tôi đã cho nó một chiều rộng là 50%, thả nó trái và phải. Đối với văn bản bản quyền tôi đã làm cho nó nhỏ hơn và thay đổi màu sắc cho một trong một nhẹ hơn. Đối với các đường liên kết tôi thả tờ ul xuống bên phải và thả tờ giấy lồng sang bên trái, cho một lề 30px, cho con cuối cùng đã gỡ bỏ lề, cho các liên kết tôi tạo kiểu nó giống với văn bản bản quyền và thêm vào biên giới 2px khi lơ lửng.
+
+Cuối cùng, vì tôi đã đặt the footer tương đối, back-top hoàn toàn vào trung tâm đúng 50%.
+6. Make the Agency HTML Responsive
+Step 1: Preparation
+
+Hãy đảm bảo rằng bạn đã làm theo hướng dẫn trước đó, nơi chúng tôi chuyển đổi một tệp tin PSD thành một trang web HTML / CSS hoạt động. Trước bất kỳ điều gì khác, tôi muốn chỉ ra rằng chúng ta cần phải thiết kế nó như thế nào dựa trên thiết kế hiện tại của chúng tôi cho một khung nhìn khác, trong trường hợp này cho một thiết bị di động có chiều rộng tối đa là 320px.
+
+Trong hình trên, bạn có thể thấy các phần tử giống nhau nhưng tôi đã tạo kiểu nó theo cách phù hợp với chiều rộng 320px của một phiên bản di động. Đối với hướng dẫn này, chúng tôi sẽ không giải quyết được quá trình thiết kế, chúng tôi sẽ nhảy trực tiếp vào mã hóa. Đừng lo lắng, trong hướng dẫn HTML sắp tới của tôi, tôi sẽ dạy cho bạn cách thiết kế cho web đáp ứng. Cuối cùng, tất nhiên bạn vẫn cần trình biên tập mã yêu thích của mình, công cụ gỡ lỗi và cuối cùng là trình duyệt web, nơi chúng ta có thể xem bố cục được mã hóa của chúng tôi.
+Step 2: Getting Files Ready
+
+Đảm bảo bạn mở tệp HTML và tệp CSS trong trình chỉnh sửa văn bản của mình và chúng tôi đã sẵn sàng.
+Step 3: Adding Meta Tag
+Step 4: Working < 960 Viewport
+Vì bố cục của chúng tôi bây giờ ít hơn 960px, chúng tôi sẽ tạo kiểu cho tất cả các yếu tố vùng chứa chính bằng cách thay đổi chiều rộng thành 768px.
+
+Tiếp theo là khu vực thanh trượt, chú ý rằng chúng ta có một tiêu đề với một nhóm tiêu đề chiếu, một div với một lớp bên phải của slide chứa thông tin và đọc thêm.
+
+Chúng ta cần thay đổi phong cách này bằng cách loại bỏ nền của tiêu đề và thay đổi chiều rộng / chiều cao cố định để tự động, không ra khỏi padding, thêm một biên 20px, và cuối cùng thay đổi màu sắc cho một màu xám tối.
+
+Đối với img hiển thị trên thanh trượt của chúng tôi, chúng tôi sẽ ẩn nó bằng cách thay đổi hiển thị thành không. Đối với thông tin về trình chiếu bên phải, chúng ta sẽ bỏ lề trái để đẩy nó về phía bên trái, cũng cho thông tin. Thay đổi độ rộng sang 768px và thêm phần lề dưới 20px.
+
+Đối với điều khiển thanh trượt, hãy di chuyển sang bên phải bằng cách thay đổi giá trị phải thành 0px, cho prev thay đổi giá trị thành 25px. Cuối cùng, cho pagination thay đổi giá trị còn lại để 0px.
+
+Chuyển sang phần dịch vụ. Khi chúng tôi viết mã cho phần dịch vụ, chúng ta đã quên thêm một nhóm lớp vào vùng chứa của cha mẹ, chúng ta đã biết được chức năng của nhóm lớp nên không cần phải giải thích. Đối với kiểu dáng CSS chúng tôi sẽ chỉ xóa nền và thay đổi giá trị độ cao thành tự động.
+
+<div id = "service" class = "group" />
+Bên trong phần dịch vụ của chúng tôi, chúng tôi có vector và trang web mà chúng tôi đã tạo kiểu theo mặc định bằng cách đưa ra một khoảng đệm trái 30px, chúng ta hãy bỏ nó ra và thay đổi chiều rộng thành 369px. Cuối cùng, đối với vector img và web img, hãy thay đổi margin thành 0.
+
+Trong phần phương tiện truyền thông vì chúng tôi không có đủ không gian ở đây, chúng ta chỉ cần ẩn facebook bằng cách thay đổi hiển thị thành không. Có lẽ bạn đang tự hỏi tại sao ẩn nó?
+
+Vâng, tôi biết chúng ta nên tìm một cách để làm cho mọi thứ đáp ứng, nhưng dựa trên những gì tôi đã đọc từ các blog khác, đôi khi chúng ta cần phải gỡ bỏ / ẩn một số yếu tố do thiếu không gian, giống như một số trang web đáp ứng khác, họ loại bỏ một vài liên kết trong điều hướng chính của họ.
+
+Trong phần widget, điều duy nhất chúng ta cần thay đổi là các liên kết, chúng ta hãy thay đổi chiều rộng mặc định thành auto, sau đó bằng cách thả các phần tử li sang trái và thêm một margin 30px sang phải.
+Code
+/* VIEWPORT &lt; 960px */
+@media only screen and (max-width: 960px)
+{
+
+header, nav, #slides, #service, #widget, #media, #client, footer, #container
+{ 
+width: 768px; 
+}
+	.slide-right{
+	
+		left: 0;
+	}
+	.slide-heading{
+	
+		width: auto;
+		height: auto;
+		padding: 0;
+		margin: 0 0 20px 0;
+		background-image: none;
+		color: #333;
+	}
+	.slides_container div img{
+	
+		display: none;
+	}
+	.slide-right .info{
+	
+		width: 768px;
+		margin-bottom: 20px;
+		margin-left: 0;
+	}
+	.slide-right .readmore{
+	
+		margin-left: 0;
+	}
+	.slides_container{
+	
+		height: 200px;
+	}
+	a.next{
+	
+		right: 0px;
+	}
+	a.prev{
+	
+		right: 25px;
+	}
+	.pagination{
+	
+		left: 0;
+	}
+	#service{
+	
+		background: none;
+		height: auto;
+	}
+	#vector{
+	
+		padding-left: 0;
+		width: 369px;
+	}
+	#vector img{
+	
+		margin-right: 0;
+	}
+	#web{
+	
+	padding-left: 0;
+	width: 369px;
+	}
+	#web img{
+	
+		margin-right: 0;
+	}
+	#facebook{
+	
+		display: none;
+	}
+	#twitter{
+	
+		margin-left: 18px;
+	}
+	#blog{
+	
+		clear: both;
+	}
+	#links{
+	
+		width: auto;
+		margin-bottom: 30px;
+	}
+	#links ul li{
+	
+		float: left;
+		margin-right: 30px;
+	}
+}
+Step 5: Working < 768 Viewport
+
+/* VIEWPORT &lt; 768px */
+
+@media only screen and (max-width: 768px)
+{
+
+	header, nav, #slides, #service, #widget, #media, #client, footer, #container
+	{
+	width: 524px;
+	}
+	nav ul li.last{
+	display: none;
+	}
+	.slides_container{
+		height: 250px;
+	}
+	.slide-right .info{
+		width: 524px;
+	}
+	#web{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	#web img{
+		padding-left: 20px;
+	}
+	#vector{
+		width: 100%;
+	}
+	#vector img{
+		padding-left: 20px;
+	}
+	#service{
+		height: auto;
+	}
+	#video{
+		margin: 0 auto 30px auto;
+		float: none;
+	}
+	#twitter, #facebook{
+	float: none;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	}
+	#facebook{
+		display: block;
+	}
+	#links{
+		width: 285px;
+		float: none;
+		margin: 0 auto;
+	}
+	#links ul li{
+		width: 285px
+	}
+	#blog{
+		float: none;
+		margin: 30px auto;
+	}
+	#location{
+		float: none;
+		margin: 0 auto;
+	}
+	#client ul li{
+		width: 100%;
+		float: none;
+		margin: 30px 0;
+	}
+	#footer-left{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	#footer-left p{
+		text-align: center;
+	}
+	#footer-right{
+		float: none;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	#footer-right ul{
+		float: none;
+		width: 75%;
+		margin: 0 auto;
+	}
+}
+Bước đầu tiên là tương tự như những gì chúng tôi đã làm trong chương trước. Hãy thay đổi chiều rộng của các thùng chứa chính thành 524px.
+
+Bây giờ chúng ta đang ở trên một khung nhìn nhỏ hơn, ít hơn 768px, thanh tìm kiếm sẽ rơi xuống menu điều hướng. Vì vậy, để có một giải pháp nhanh chóng, chúng ta hãy ẩn nó ngay bây giờ.
+
+Trong vùng thanh trượt, hãy giảm chiều cao của vùng chứa thành 250px và thay đổi chiều rộng của .info thành 524px.
+Trong phần web và vector, hãy thay đổi chiều rộng thành 100% để lấp đầy toàn bộ không gian và bằng cách cho web lề phía dưới 30px để cho không gian.
+
+Trong phần media section, mặc định div video của chúng tôi được thả nổi sang bên trái, chúng ta hãy thay đổi nó thành không, đặt ở giữa và thêm vào đó chúng ta sẽ bổ sung thêm biên dưới cùng 30px. Đối với twitter và Facebook vẫn là cùng một nổi để không có gì, vị trí trung tâm, thêm một margin 30px dưới cùng và cuối cùng chúng ta hãy tiết lộ Facebook một lần nữa bằng cách thay đổi màn hình để chặn.
+Step 6: Working < 524 Viewport
+
+Bây giờ chúng ta đang đi đến một khung nhìn nhỏ hơn dành cho thiết bị di động. Điều đầu tiên cần thay đổi là các thùng chứa chính: thay đổi chiều rộng thành 300px.
+
+
+Tiếp theo, chúng ta sẽ ẩn div gọi bằng cách thêm hiển thị vào none. Đối với logo của chúng ta hãy đặt nó vào giữa bằng cách cho nó một chiều rộng 100% và bằng cách thêm một vị trí trung tâm vị trí nền.
+
+Trong phần nav, hãy thực hiện điều hướng theo kiểu theo chiều dọc để phù hợp hoàn hảo với chế độ xem nhỏ hơn. Thứ nhất, chúng ta hãy cho nav độ cao tự động, không làm nổi bật các phần tử li, không có đường biên nào kể từ khi chúng ta có một đường biên-trái và phải theo mặc định, sau đó ghi đè lên kiểu đó bằng cách thêm một đường viền-bottom và top.
+
+Bây giờ chúng ta sẽ gỡ bỏ border-top cho .home và border-bottom cho .last, chúng ta cũng sẽ hiển thị thanh tìm kiếm một lần nữa bằng cách áp dụng một khối hiển thị để .last cũng cung cấp cho nó 100% chiều rộng và 0 ra margin.
+
+Để định vị thanh tìm kiếm chính xác áp dụng lề 15px ở bên trái trên li.last div. Giờ hãy đặt văn bản vào trung tâm bằng cách sử dụng trung tâm văn bản. Tiếp theo, chúng tôi sẽ thay đổi bán kính biên giới sang trên cùng bên trái và trên cùng bên phải khi chúng tôi di chuột đến .home.
+
+Trong phần thanh trượt, chúng ta chỉ cần thay đổi chiều rộng của vùng chứa thành 270px và cho tiêu đề .slide và .info thay đổi chiều rộng thành 300px.
+
+Trong phần dịch vụ chúng ta hãy thay đổi chiều rộng và chiều cao của hình ảnh cho web và vector, cuối cùng cung cấp cho dịch vụ div một chiều cao của tự động.
+
+Cuối cùng chúng ta sẽ tạo kiểu các liên kết footer bằng cách thay đổi float thành none, cho nó chiều rộng 285px và đặt nó vào giữa. Đối với các phần tử li thay đổi phao cũng không có và 0 ra lề, cuối cùng cung cấp cho một phần tử một padding 8px trên và dướ
+/* VIEWPORT &lt; 524px */
+@media only screen and (max-width: 524px)
+{
+
+	header, nav, #slides, #service, #widget, #media, #client, footer, #container{
+	width: 300px;
+	}
+	header h2 a{
+		width: 100%;
+		background-position: center top;
+	}
+	nav{
+		height: auto;
+	}
+	nav ul li{
+		float: none;
+		border: none;
+		border-bottom: 1px solid #336c2b;
+		border-top: 1px solid #78c368;
+	}
+	nav ul li.home{
+		border-top: none;
+	}
+	nav ul li.last{
+		display: block;
+		border-bottom: none;
+		width: 100%;
+		margin: 0;
+	}
+	nav ul li.last div{
+		margin-left: 15px;
+	}
+	nav ul li a{
+		text-align: center;
+	}
+	nav ul li.home a:hover{
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-top-right-radius: 30px;
+	-webkit-border-bottom-left-radius: 0;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	border-bottom-left-radius: 0;
+	background: #5fae53 url(images/home.png) no-repeat 50% 50%;
+	}
+	#call{
+		display: none;
+	}
+	.slides_container{
+		height: 270px;
+	}
+	.slide-heading{
+		width: 300px;
+	}
+	.slide-right .info{
+		width: 300px;
+	}
+	#web img{
+		width: 64px;
+		height: 72px;
+	}
+	#vector img{
+		width: 76px;
+		height: 69px;
+	}
+	#service{
+		height: auto;
+	}
+	#footer-right ul{
+		float: none;
+		width: 285px;
+		margin: 0 auto;
+	}
+	#footer-right ul li{
+		float: none;
+		margin: 0;
+	}
+	#footer-right ul li a{
+		padding: 8px 0;
+	}
+}
 
